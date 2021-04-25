@@ -495,6 +495,7 @@ static int setup_2nd_dtb(struct dtb *dtb, char *command_line, int on_crash)
 	int new_size;
 	int result, kaslr_seed;
 
+	return 0;
 	result = fdt_check_header(dtb->buf);
 
 	if (result) {
