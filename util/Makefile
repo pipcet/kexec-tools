@@ -2,7 +2,7 @@ BIN_TO_HEX:= bin/bin-to-hex
 
 $(BIN_TO_HEX): $(srcdir)/util/bin-to-hex.c
 	@$(MKDIR) -p $(@D)
-	gcc $(CFLAGS) -o $@ $^
+	gcc -o $@ $^
 
 $(BIN_TO_HEX): CC=$(BUILD_CC)
 $(BIN_TO_HEX): CFLAGS=$(BUILD_CFLAGS)
