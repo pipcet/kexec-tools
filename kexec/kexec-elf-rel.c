@@ -518,7 +518,7 @@ void elf_rel_set_symbol(struct mem_ehdr *ehdr,
 	}
 	shdr = &ehdr->e_shdr[sym.st_shndx];
 	if (shdr->sh_type == SHT_NOBITS) {
-		die("Symbol: %s is in a bss section cannot set\n", name);
+		return;
 	}
 	sym_buf = (unsigned char *)(shdr->sh_data + sym.st_value);
 	memcpy(sym_buf, buf, size);
